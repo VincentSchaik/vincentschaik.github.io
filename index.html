@@ -1,7 +1,245 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vincent Schaik — Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="topbar">
+        <button class="menu-button" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="menu-button__bar"></span>
+          <span class="menu-button__bar"></span>
+          <span class="menu-button__bar"></span>
+        </button>
+        <div class="topbar__brand">
+          <span class="topbar__title">Project Documentation</span>
+          <span class="topbar__subtitle">Organise your knowledge in one place</span>
+        </div>
+        <label class="search" for="search">
+          <span class="sr-only">Search the documentation</span>
+          <svg
+            class="search__icon"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          >
+            <path
+              d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 10-.71.71l.27.28v.79l4.25 4.25a1 1 0 001.41-1.41L15.5 14zm-6 0a4.5 4.5 0 110-9 4.5 4.5 0 010 9z"
+              fill="currentColor"
+            />
+          </svg>
+          <input id="search" type="search" placeholder="Search docs (coming soon)" />
+        </label>
+      </header>
+
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar__inner">
+          <div class="sidebar__section">
+            <h2 class="sidebar__heading">Getting started</h2>
+            <ul class="sidebar__links">
+              <li><a href="#introduction">Introduction</a></li>
+              <li><a href="#quick-start">Quick start</a></li>
+              <li><a href="#project-structure">Project structure</a></li>
+            </ul>
+          </div>
+          <div class="sidebar__section">
+            <h2 class="sidebar__heading">Guides</h2>
+            <ul class="sidebar__links">
+              <li><a href="#writing-docs">Writing documentation</a></li>
+              <li><a href="#customisation">Customisation</a></li>
+              <li><a href="#deployment">Deployment</a></li>
+            </ul>
+          </div>
+          <div class="sidebar__section">
+            <h2 class="sidebar__heading">References</h2>
+            <ul class="sidebar__links">
+              <li><a href="#components">Components</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#resources">Further resources</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <main class="content" id="content">
+        <article class="doc">
+          <section id="introduction" class="doc__section">
+            <h1>Welcome to your documentation hub</h1>
+            <p>
+              Use this GitBook-inspired theme to centralise the knowledge around your project or
+              product. The layout is optimised for readability with a persistent navigation sidebar,
+              subtle typography, and plenty of room for long-form guides.
+            </p>
+            <p>
+              Replace the sample content with your own documentation pages. Each section is linked in
+              the sidebar, making it easy for readers to jump directly to what they need.
+            </p>
+            <div class="callout callout--info">
+              <h3 class="callout__title">Tip</h3>
+              <p class="callout__content">
+                You can add more pages by duplicating this template and updating the sidebar links to
+                match your new sections.
+              </p>
+            </div>
+          </section>
+
+          <section id="quick-start" class="doc__section">
+            <h2>Quick start</h2>
+            <ol>
+              <li><strong>Plan</strong> your documentation structure and define your main sections.</li>
+              <li><strong>Create</strong> a new section in the sidebar for each major topic.</li>
+              <li><strong>Write</strong> focused pages using clear headings and consistent tone.</li>
+              <li><strong>Publish</strong> changes by committing to your GitHub Pages repository.</li>
+            </ol>
+            <p>
+              The <code>styles.css</code> file controls the appearance of the theme. Tweak the color
+              palette or typography to align with your brand.
+            </p>
+          </section>
+
+          <section id="project-structure" class="doc__section">
+            <h2>Project structure</h2>
+            <p>
+              This starter comes with just three files: <code>index.html</code>, <code>styles.css</code>,
+              and <code>script.js</code>. They are small and easy to customise.
+            </p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>File</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>index.html</code></td>
+                  <td>Main layout and content for the documentation homepage.</td>
+                </tr>
+                <tr>
+                  <td><code>styles.css</code></td>
+                  <td>Theme styling, including colors, typography, and responsive layout.</td>
+                </tr>
+                <tr>
+                  <td><code>script.js</code></td>
+                  <td>Enhancements such as the mobile navigation toggle.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="writing-docs" class="doc__section">
+            <h2>Writing documentation</h2>
+            <p>
+              Keep your guides concise and approachable. Use short paragraphs, descriptive headings,
+              and callouts for important information. This template supports blockquotes, lists, code
+              samples, and tables, so feel free to mix and match content blocks as needed.
+            </p>
+            <blockquote>
+              Well-crafted docs turn knowledge into a renewable resource for your team.
+            </blockquote>
+            <pre class="code-block"><code>// Example: Highlighting a shell command
+npm install
+npm run docs
+</code></pre>
+          </section>
+
+          <section id="customisation" class="doc__section">
+            <h2>Customisation</h2>
+            <p>
+              Adjust the colour palette by editing the CSS variables at the top of the stylesheet. You
+              can also integrate a static site generator or markdown processor if your documentation
+              grows beyond a single page.
+            </p>
+            <ul>
+              <li>Update brand colors and fonts</li>
+              <li>Swap the logo text for an SVG asset</li>
+              <li>Connect the search input to your preferred search provider</li>
+            </ul>
+          </section>
+
+          <section id="deployment" class="doc__section">
+            <h2>Deployment</h2>
+            <p>
+              Host your documentation with GitHub Pages, Netlify, Vercel, or any static hosting
+              provider. Whenever you push changes to the <code>main</code> branch, the latest version of
+              your docs will go live.
+            </p>
+          </section>
+
+          <section id="components" class="doc__section">
+            <h2>Components</h2>
+            <p>
+              The following components are included to help you structure content with minimal effort:
+            </p>
+            <div class="cards">
+              <article class="card">
+                <h3>Callouts</h3>
+                <p>Draw attention to warnings, tips, or important notes.</p>
+              </article>
+              <article class="card">
+                <h3>Tables</h3>
+                <p>Summarise configuration options, command references, or release notes.</p>
+              </article>
+              <article class="card">
+                <h3>Code blocks</h3>
+                <p>Share runnable examples or configuration snippets with syntax-friendly styling.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="faq" class="doc__section">
+            <h2>Frequently asked questions</h2>
+            <details class="accordion" open>
+              <summary>Can I add more pages?</summary>
+              <p>
+                Absolutely. Duplicate this file and update the navigation. For larger docs, consider a
+                build step to generate pages from Markdown.
+              </p>
+            </details>
+            <details class="accordion">
+              <summary>Does this support dark mode?</summary>
+              <p>
+                A dark theme is easy to add. Extend the CSS with a <code>[data-theme="dark"]</code>
+                selector and toggle it via JavaScript.
+              </p>
+            </details>
+            <details class="accordion">
+              <summary>Can I embed rich media?</summary>
+              <p>
+                Yes, you can embed images, videos, or interactive demos just like any HTML page.
+              </p>
+            </details>
+          </section>
+
+          <section id="resources" class="doc__section">
+            <h2>Further resources</h2>
+            <p>Explore these links to learn more about writing great documentation:</p>
+            <ul>
+              <li><a href="https://www.writethedocs.org/">Write the Docs community</a></li>
+              <li><a href="https://diataxis.fr/">Diátaxis documentation framework</a></li>
+              <li><a href="https://github.com/GitbookIO/gitbook">GitBook on GitHub</a></li>
+            </ul>
+          </section>
+        </article>
+        <footer class="footer">
+          <p>
+            Built with ❤️ for clear communication. Update this footer with your team's contact
+            details or contribution guidelines.
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
